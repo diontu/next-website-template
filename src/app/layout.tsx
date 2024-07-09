@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
+import PageSection from "@/components/page-section";
+import { FOOTER_NAV, LEGAL_NAV } from "@/app/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <PageSection fitContent className="pt-10 pb-10">
+          <Footer
+            businessName="Shadcn"
+            footerNav={FOOTER_NAV}
+            legalNav={LEGAL_NAV}
+          />
+        </PageSection>
+      </body>
     </html>
   );
 }

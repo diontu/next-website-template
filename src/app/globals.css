@@ -33,6 +33,10 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --default-padding: 80px;
+
+    --color-de-emphasized: #b7b7b7;
   }
 
   .dark {
@@ -73,7 +77,10 @@
   body {
     @apply bg-background text-foreground;
   }
-  .page-section {
+  .page-section-page {
     height: min(100vh, 840px);
+  }
+  .page-section-content {
+    height: 100%;
   }
 }
