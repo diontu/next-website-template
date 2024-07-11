@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <main className="flex flex-col">{children}</main>
         <PageSection fitContent className="pt-10 pb-10">
           <Footer
             businessName="Shadcn"
